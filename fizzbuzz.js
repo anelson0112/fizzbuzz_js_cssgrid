@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       console.log('Just a dud.');
       itsJustaDud(this);
+    }
   }
 
   // General number variable:
@@ -140,7 +141,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Event listener:
   var numClick = number.addEventListener('click', function() {
+    console.log('Click detected.');
     var theNumber = parseInt(this.innerText);
+    console.log('I think you clicked on square number ' + theNumber + '.');
     fbMath(theNumber);
   })
 
