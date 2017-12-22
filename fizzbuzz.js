@@ -103,25 +103,31 @@ document.addEventListener('DOMContentLoaded', function() {
   // var sq100 = document.querySelector('#num100');
 
   // Output:
+  function bingo() {
+    this.style.backgroundColor = 'red';
+    this.style.fontSize = '1em';
+    this.style.fontWeight = '400';
+  }
   function itsFizz() {
     this.innerText = 'fizz';
-    console.log('You should see fizz.');
-    this.style.backgroundColor = 'red';
+    console.log('The square should say fizz.');
+    bingo();
     console.log('The square should be red.');
   };
   function itsBuzz() {
     this.innerText = 'buzz';
-    console.log('You should see buzz.');
-    this.style.backgroundColor = 'red';
+    console.log('The square should say buzz.');
+    bingo();
     console.log('The square should be red.');
   };
   function itsFizzBuzz() {
     this.innerText = 'fizzbuzz';
-    console.log('You should see fizzbuzz.');
-    this.style.backgroundColor = 'red';
+    console.log('The square should say fizzbuzz.');
+    bingo();
     console.log('The square should be red.');
   };
   function itsJustaDud() {
+    console.log('The square text should not change.');
     this.style.backgroundColor = 'lightgrey';
     console.log('The square should be grey.');
   };
@@ -144,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   // General number variable:
-  var number = document.querySelector('.number');
+  var number = document.querySelectorAll('.number');
 
   // Event listener:
   var numClick = number.addEventListener('click', function() {
