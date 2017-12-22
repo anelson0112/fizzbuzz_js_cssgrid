@@ -10,53 +10,52 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   function itsFizz() {
     number.innerText = 'Fizz!';
-    console.log('The square should say fizz.');
+    console.log('The square should now say Fizz.');
     bingo();
-    console.log('The square should be red.');
+    console.log('The square should change colour.');
   };
   function itsBuzz() {
     number.innerText = 'Buzz!';
-    console.log('The square should say buzz.');
+    console.log('The square should now say Buzz.');
     bingo();
-    console.log('The square should be red.');
+    console.log('The square should change colour.');
   };
   function itsFizzBuzz() {
     number.innerHTML = 'Fizz-<br>Buzz!';
-    console.log('The square should say fizzbuzz.');
+    console.log('The square should now say FizzBuzz.');
     bingo();
-    console.log('The square should be red.');
+    console.log('The square should change colour.')
   };
   function itsJustaDud() {
-    console.log('The square text should not change.');
     number.style.backgroundColor = 'lightgrey';
-    console.log('The square should be grey.');
+    console.log('The square should turn grey.');
   };
 
   // Math:
   function fbMath(theNumber) {
     if (theNumber % 15 === 0) {
-      console.log('FizzBuzz!');
+      console.log('We have a FizzBuzz!');
       itsFizzBuzz(this);
     } else if (theNumber % 5 === 0) {
-      console.log('Buzz!');
+      console.log('We have a Buzz!');
       itsBuzz(this);
     } else if (theNumber % 3 === 0) {
-      console.log('Fizz!');
+      console.log('We have a Fizz!');
       itsFizz(this);
     } else {
-      console.log('Just a dud.');
+      console.log('It is neither a Fizz nor a Buzz, let alone a FizzBuzz.');
       itsJustaDud(this);
     }
   };
 
   // General number variable:
-  var number = document.querySelector('.number');
+  var number = document.querySelector('#num3');
 
   // Event listener:
   var numClick = number.addEventListener('click', function() {
     console.log('Click detected.');
     var theNumber = parseInt(this.innerText);
-    console.log('I think you clicked on square number ' + theNumber + '.');
+    console.log('I think you clicked on number ' + theNumber + '.');
     fbMath(theNumber);
   });
 
