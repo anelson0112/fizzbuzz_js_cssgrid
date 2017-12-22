@@ -49,7 +49,7 @@ footer {
 
 .number {
   box-sizing: border-box;
-  background-color: steelblue;
+  background-color: #4682b4;
   border-radius: 4px;
   font-weight: 200;
   font-size: 1.2em;
@@ -58,4 +58,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.number:hover {
+  background-color: #3f76a3;
 }

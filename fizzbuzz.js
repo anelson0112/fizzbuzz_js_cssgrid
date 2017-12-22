@@ -2,25 +2,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Output:
   function bingo() {
-    number.style.backgroundColor = 'red';
+    number.style.backgroundColor = 'salmon';
+    number.style.color = 'black';
     number.style.fontSize = '1em';
     number.style.fontWeight = '400';
     number.style.letterSpacing = '1px';
   }
   function itsFizz() {
-    number.innerText = 'F';
+    number.innerText = 'Fizz!';
     console.log('The square should say fizz.');
     bingo();
     console.log('The square should be red.');
   };
   function itsBuzz() {
-    number.innerText = 'B';
+    number.innerText = 'Buzz!';
     console.log('The square should say buzz.');
     bingo();
     console.log('The square should be red.');
   };
   function itsFizzBuzz() {
-    number.innerText = 'FB';
+    number.innerHTML = 'Fizz-<br>Buzz!';
     console.log('The square should say fizzbuzz.');
     bingo();
     console.log('The square should be red.');
