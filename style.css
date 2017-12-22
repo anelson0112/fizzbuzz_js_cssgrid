@@ -15,11 +15,11 @@ span {
 
 a {
   text-decoration: none;
-  color: black;
+  color: grey;
 }
 
 a:hover {
-  color: red;
+  color: black;
 }
 
 .title_area {
@@ -32,9 +32,10 @@ a:hover {
 footer {
   position: absolute;
   bottom: 0;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   width: 100vw;
   text-align: center;
+  font-size: 0.8em;
 }
 
 .wrapper {

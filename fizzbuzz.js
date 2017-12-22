@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   // General number variable:
-  var number = document.querySelector('#num15');
+  var number = document.querySelector('.number');
 
   // Event listener:
   var numClick = number.addEventListener('click', function() {
