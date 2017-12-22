@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
   // Output:
-  function bingo() {
+  function showResult() {
     number.style.backgroundColor = 'salmon';
     number.style.color = 'black';
     number.style.fontSize = '1em';
@@ -11,19 +11,19 @@ document.addEventListener('DOMContentLoaded', function() {
   function itsFizz() {
     number.innerText = 'Fizz!';
     console.log('The square should now say Fizz.');
-    bingo();
+    showResult();
     console.log('The square should change colour.');
   };
   function itsBuzz() {
     number.innerText = 'Buzz!';
     console.log('The square should now say Buzz.');
-    bingo();
+    showResult();
     console.log('The square should change colour.');
   };
   function itsFizzBuzz() {
     number.innerHTML = 'Fizz-<br>Buzz!';
     console.log('The square should now say FizzBuzz.');
-    bingo();
+    showResult();
     console.log('The square should change colour.')
   };
   function itsJustaDud() {
