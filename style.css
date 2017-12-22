@@ -2,28 +2,46 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-h1, p {
+p {
   margin: 0;
   padding: 0;
+  color: black;
 }
 
 a {
   text-decoration: none;
+  color: grey;
+}
+
+a:hover {
+  color: green;
 }
 
 .title_area {
   width: 50vw;
   margin: 0 auto;
-  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 footer {
   position: absolute;
-  left: 0;
   bottom: 0;
-  width: 100%;
-  text-align: center;
   padding-bottom: 10px;
+  width: 100vw;
+  text-align: center;
+}
+
+.fizz_span {
+  color: green;
+}
+
+.buzz_span {
+  color: blue;
+}
+
+.both_span {
+  color: red;
 }
 
 .wrapper {
