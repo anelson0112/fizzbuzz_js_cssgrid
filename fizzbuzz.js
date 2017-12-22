@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   // Math:
-  function fbMath(i) {
+  function fbMath(theNumber) {
     if (theNumber % 3 === 0) {
       console.log('Fizz!');
       itsFizz(this);
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   // General number variable:
-  var number = document.querySelectorAll('.number');
+  var number = document.querySelector('.number');
 
   // Event listener:
   var numClick = number.addEventListener('click', function() {
