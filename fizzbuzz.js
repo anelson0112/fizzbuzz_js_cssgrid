@@ -2,24 +2,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Output:
   function bingo() {
-    this.style.backgroundColor = 'red';
-    this.style.fontSize = '1em';
-    this.style.fontWeight = '400';
+    number.style.backgroundColor = 'red';
+    number.style.fontSize = '1em';
+    number.style.fontWeight = '400';
+    number.style.letterSpacing = '1px';
   }
   function itsFizz() {
-    number.innerText = 'fizz';
+    number.innerText = 'F';
     console.log('The square should say fizz.');
     bingo();
     console.log('The square should be red.');
   };
   function itsBuzz() {
-    number.innerText = 'buzz';
+    number.innerText = 'B';
     console.log('The square should say buzz.');
     bingo();
     console.log('The square should be red.');
   };
   function itsFizzBuzz() {
-    number.innerText = 'fizzbuzz';
+    number.innerText = 'FB';
     console.log('The square should say fizzbuzz.');
     bingo();
     console.log('The square should be red.');
@@ -32,15 +33,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Math:
   function fbMath(theNumber) {
-    if (theNumber % 3 === 0) {
-      console.log('Fizz!');
-      itsFizz(this);
+    if (theNumber % 15 === 0) {
+      console.log('FizzBuzz!');
+      itsFizzBuzz(this);
     } else if (theNumber % 5 === 0) {
       console.log('Buzz!');
       itsBuzz(this);
-    } else if (theNumber % 15 === 0) {
-      console.log('FizzBuzz!');
-      itsFizzBuzz(this);
+    } else if (theNumber % 3 === 0) {
+      console.log('Fizz!');
+      itsFizz(this);
     } else {
       console.log('Just a dud.');
       itsJustaDud(this);
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   // General number variable:
-  var number = document.querySelector('.number');
+  var number = document.querySelector('#num15');
 
   // Event listener:
   var numClick = number.addEventListener('click', function() {
