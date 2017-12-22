@@ -9,10 +9,6 @@ p {
   line-height: 1.5;
 }
 
-/*span {
-  color: red;
-}*/
-
 a {
   text-decoration: none;
   color: grey;
@@ -55,7 +51,6 @@ footer {
   font-weight: 200;
   font-size: 1.2em;
   color: white;
-  /* Center the text: */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,17 +64,16 @@ footer {
   .title_area, .wrapper {
     width: 90vw;
   }
+  footer {
+    display: none;
+  }
 }
 
-/* Chris Coyier's vertical orientation lock */
 @media screen and (max-width: 768px) and (orientation: landscape) {
-  html {
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    width: 100vh;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
+  .title_area, .wrapper {
+    width: 60vw;
+  }
+  footer {
+    display: none;
   }
 }
