@@ -105,18 +105,25 @@ document.addEventListener('DOMContentLoaded', function() {
   // Output:
   function itsFizz() {
     this.innerText = 'fizz';
+    console.log('You should see fizz.');
     this.style.backgroundColor = 'red';
+    console.log('The square should be red.');
   }
   function itsBuzz() {
     this.innerText = 'buzz';
+    console.log('You should see buzz.');
     this.style.backgroundColor = 'red';
+    console.log('The square should be red.');
   }
   function itsFizzBuzz() {
     this.innerText = 'fizzbuzz';
-    this.style.backgroundColor = 'red'
+    console.log('You should see fizzbuzz.');
+    this.style.backgroundColor = 'red';
+    console.log('The square should be red.');
   }
   function itsJustaDud() {
     this.style.backgroundColor = 'lightgrey';
+    console.log('The square should be grey.');
   }
 
   // Math:
@@ -146,7 +153,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('I think you clicked on square number ' + theNumber + '.');
     fbMath(theNumber);
   })
-
 
 // end of 'DOMContentLoaded' wrapper:
 });
