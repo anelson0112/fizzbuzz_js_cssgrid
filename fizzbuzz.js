@@ -1,50 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
 
   // Output:
-  function showResult() {
-    number.style.backgroundColor = 'salmon';
-    number.style.color = 'black';
-    number.style.fontSize = '1em';
-    number.style.fontWeight = '400';
-    number.style.letterSpacing = '1px';
+  function showResult(element) {
+    element.style.backgroundColor = 'salmon';
+    element.style.color = 'black';
+    element.style.fontSize = '1em';
+    element.style.fontWeight = '400';
+    element.style.letterSpacing = '1px';
   }
-  function itsFizz() {
-    number.innerText = 'Fizz!';
-    console.log('The square should now say Fizz.');
-    showResult();
-    console.log('The square should change colour.');
+  function itsFizz(element) {
+    element.innerText = 'Fizz!';
+    showResult(element);
   };
-  function itsBuzz() {
-    number.innerText = 'Buzz!';
-    console.log('The square should now say Buzz.');
-    showResult();
-    console.log('The square should change colour.');
+  function itsBuzz(element) {
+    element.innerText = 'Buzz!';
+    showResult(element);
   };
-  function itsFizzBuzz() {
-    number.innerHTML = 'Fizz-<br>Buzz!';
-    console.log('The square should now say FizzBuzz.');
-    showResult();
-    console.log('The square should change colour.')
+  function itsFizzBuzz(element) {
+    element.innerHTML = 'Fizz-<br>Buzz!';
+    showResult(element);
   };
-  function itsJustaDud() {
-    number.style.backgroundColor = 'lightgrey';
-    console.log('The square should turn grey.');
+  function itsJustaDud(element) {
+    element.style.backgroundColor = 'lightgrey';
   };
 
   // Math:
-  function fbMath(theNumber) {
-    if (theNumber % 15 === 0) {
-      console.log('We have a FizzBuzz!');
-      itsFizzBuzz(this);
-    } else if (theNumber % 5 === 0) {
-      console.log('We have a Buzz!');
-      itsBuzz(this);
-    } else if (theNumber % 3 === 0) {
-      console.log('We have a Fizz!');
-      itsFizz(this);
+  function doFizzBuzzMath(squareValue, element) {
+    if (squareValue % 15 === 0) {
+      itsFizzBuzz(element);
+    } else if (squareValue % 5 === 0) {
+      itsBuzz(element);
+    } else if (squareValue % 3 === 0) {
+      itsFizz(element);
     } else {
-      console.log('It is neither a Fizz nor a Buzz, let alone a FizzBuzz.');
-      itsJustaDud(this);
+      itsJustaDud(element);
     }
   };
 
@@ -54,10 +43,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Create event listeners for each:
   for (var i = 0; i < numbers.length; i++) {
     var numClick = numbers[i].addEventListener('click', function() {
-      console.log('Click detected.');
-      var theNumber = parseInt(this.innerText);
-      console.log('I think you clicked on number ' + theNumber + '.');
-      // fbMath(theNumber);
+      var squareValue = parseInt(this.innerText);
+      var element = this;
+      doFizzBuzzMath(squareValue, element);
     });
   }
 

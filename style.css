@@ -64,3 +64,22 @@ footer {
 .number:hover {
   background-color: #3f76a3;
 }
+
+@media screen and (max-width: 768px) {
+  .title_area, .wrapper {
+    width: 90vw;
+  }
+}
+
+/* Chris Coyier's vertical orientation lock */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
