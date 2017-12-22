@@ -6,6 +6,7 @@ p {
   margin: 0;
   padding: 0;
   color: black;
+  line-height: 1.5;
 }
 
 a {
@@ -32,15 +33,7 @@ footer {
   text-align: center;
 }
 
-.fizz_span {
-  color: green;
-}
-
-.buzz_span {
-  color: blue;
-}
-
-.both_span {
+span {
   color: red;
 }
 
@@ -56,7 +49,7 @@ footer {
 
 .number {
   box-sizing: border-box;
-  background-color: grey;
+  background-color: steelblue;
   border-radius: 4px;
   font-weight: 200;
   font-size: 1.2em;

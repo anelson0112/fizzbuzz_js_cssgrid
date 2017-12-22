@@ -1,4 +1,4 @@
-# The 'FizzBuzz' (a.k.a. FizzBoom) challenge
+# The 'FizzBuzz' (a.k.a. FizzBoom) challenge, made interactive
 
 - written with vanilla **JavaScript**
 
