@@ -48,16 +48,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
 
-  // General number variable:
-  var number = document.querySelector('#num3');
+  // Create array of all number squares:
+  var numbers = document.querySelectorAll('.number');
 
-  // Event listener:
-  var numClick = number.addEventListener('click', function() {
-    console.log('Click detected.');
-    var theNumber = parseInt(this.innerText);
-    console.log('I think you clicked on number ' + theNumber + '.');
-    fbMath(theNumber);
-  });
+  // Create event listeners for each:
+  for (var i = 0; i < numbers.length; i++) {
+    var numClick = numbers[i].addEventListener('click', function() {
+      console.log('Click detected.');
+      var theNumber = parseInt(this.innerText);
+      console.log('I think you clicked on number ' + theNumber + '.');
+      // fbMath(theNumber);
+    });
+  }
 
 // end of 'DOMContentLoaded' wrapper:
 });
