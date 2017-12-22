@@ -108,23 +108,23 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('You should see fizz.');
     this.style.backgroundColor = 'red';
     console.log('The square should be red.');
-  }
+  };
   function itsBuzz() {
     this.innerText = 'buzz';
     console.log('You should see buzz.');
     this.style.backgroundColor = 'red';
     console.log('The square should be red.');
-  }
+  };
   function itsFizzBuzz() {
     this.innerText = 'fizzbuzz';
     console.log('You should see fizzbuzz.');
     this.style.backgroundColor = 'red';
     console.log('The square should be red.');
-  }
+  };
   function itsJustaDud() {
     this.style.backgroundColor = 'lightgrey';
     console.log('The square should be grey.');
-  }
+  };
 
   // Math:
   function fbMath(i) {
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log('Just a dud.');
       itsJustaDud(this);
     }
-  }
+  };
 
   // General number variable:
   var number = document.querySelector('.number');
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var theNumber = parseInt(this.innerText);
     console.log('I think you clicked on square number ' + theNumber + '.');
     fbMath(theNumber);
-  })
+  });
 
 // end of 'DOMContentLoaded' wrapper:
 });
